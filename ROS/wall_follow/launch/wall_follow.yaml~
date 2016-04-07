@@ -1,0 +1,35 @@
+########################
+##  wall_follow Node  ##
+########################
+
+## Values are in meters
+
+# User Defined Variables and Constants for IR
+wall_follow/ir/min_ir_val:  0.5
+wall_follow/ir/max_ir_val:  4.0
+
+# Robot Dimensions
+wall_follow/dimensions/tick_rev:     90
+wall_follow/dimensions/dia_wheel:    0.087
+wall_follow/dimensions/width_wheel:  0.215
+
+# wall follow characteristics
+wall_follow/wall_follow/des_wall_dist:     1
+wall_follow/wall_follow/min_front_dist:    0.5
+wall_follow/wall_follow/max_front_dist:    1.0
+wall_follow/wall_follow/min_side_dist:     0.4
+wall_follow/wall_follow/max_side_dist:     1.0
+wall_follow/wall_follow/right_array_val:   12
+wall_follow/wall_follow/center_array_val:  17
+
+# controller
+wall_follow/controller/kp:  0.9
+
+# Topics
+wall_follow/odometry_topic:    "/wall_follow/odometry"
+wall_follow/laser_scan_topic:  "/camera/scan"
+wall_follow/traj_angle_topic:  "/wall_follow/traj_angle"
+
+# state
+wall_follow/state: false
+

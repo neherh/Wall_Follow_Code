@@ -1,0 +1,22 @@
+<launch>
+
+  <!-- Get parameters from .yaml file -->
+  <rosparam file="$(find wall_follow)/launch/wall_follow.yaml"/>
+
+  <!-- Launch nodes -->
+  <node
+        pkg="wall_follow" 
+        type="wall_follow_node" 
+        name="wall_follow_node" 
+        output="screen" 
+        required="true"
+  />
+
+
+  
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen" required="true">
+      <param name="~port" value="/dev/ttyACM0" />
+      <param name="~baud" value="115200" />
+  </node>
+ 
+</launch>
